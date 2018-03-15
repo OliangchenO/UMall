@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="UMall:war">
+    <output-path>$PROJECT_DIR$/UMall/target</output-path>
+    <root id="archive" name="UMall-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="UMall:war exploded" />
+    </root>
+  </artifact>
+</component>
