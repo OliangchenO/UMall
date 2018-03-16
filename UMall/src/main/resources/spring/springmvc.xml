@@ -37,4 +37,5 @@
     <mvc:resources mapping="/temp/**" location="/temp/"/>
     <mvc:resources mapping="/icon/**" location="/icon/"/>
     <mvc:resources mapping="/upload/**" location="/upload/"/>
+    <mvc:resources mapping="/swagger/**" location="/swagger/"/>
 </beans>

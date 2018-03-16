@@ -22,7 +22,7 @@ import java.util.Map;
 
 /**
  * Spring AOP实现日志管理
- * @author Exrickx
+ * @author Liang
  */
 @Aspect
 @Component

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * @author Exrickx
+ * @author Liang
  */
 @RestController
 @Api(description= "系统配置管理")

@@ -1,6 +1,5 @@
-package com.liang.manager.exception;
+package com.liang.common.exception;
 
-import com.liang.common.exception.UMallException;
 import com.liang.common.pojo.Result;
 import com.liang.common.utils.ResultUtil;
 import org.slf4j.Logger;
@@ -37,7 +36,7 @@ public class RestCtrlExceptionHandler {
     @ExceptionHandler(UMallException.class)
     @ResponseBody
     public Result<Object> handleUMallException(UMallException e) {
-        String errorMsg="UMall exception: ";
+        String errorMsg="Xmall exception: ";
         if (e!=null){
             errorMsg=e.getLocalizedMessage();
             log.warn(e.getLocalizedMessage());
@@ -49,7 +48,7 @@ public class RestCtrlExceptionHandler {
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
     public Result<Object> handleException(Exception e) {
-        String errorMsg="Exception: ";
+        String errorMsg="exception: ";
         if (e!=null){
             log.warn(e.getMessage()+" exception getMessage");
             log.warn(e.getLocalizedMessage()+" exception getMessage");

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author Exrickx
+ * @author Liang
  */
 @RestController
 @Api(description= "订单管理")

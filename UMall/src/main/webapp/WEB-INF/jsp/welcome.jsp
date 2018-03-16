@@ -7,9 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="OliangchenO">
     <link rel="Shortcut Icon" href="icon/all.png" />
-    <title>MyMall后台管理系统 v1.0</title>
-    <meta name="keywords" content="MyMall后台管理系统 v1.0,MyMall,MyMall购物商城后台管理系统">
-    <meta name="description" content="MyMall后台管理系统 v1.0，是一款电商后台管理系统，适合中小型CMS后台系统。">
+    <title>UMall后台管理系统 v1.0</title>
+    <meta name="keywords" content="UMall后台管理系统 v1.0,UMall,UMall购物商城后台管理系统">
+    <meta name="description" content="UMall后台管理系统 v1.0，是一款电商后台管理系统，适合中小型CMS后台系统。">
 
     <!-- Bootstrap core CSS -->
     <link href="lib/flatlab/css/bootstrap.min.css" rel="stylesheet">
@@ -200,13 +200,13 @@
                                                 尊敬的 <span id="username"></span>，
                                                 <span id="hello"></span>
                                                 现在时间是：<span id="currentTime"></span></a>
-                                            <p><br>MyMall是基于SOA架构的大型开源分布式电商B2C购物商城，前后端开发分离，前台
+                                            <p><br>UMall是基于SOA架构的大型开源分布式电商B2C购物商城，前后端开发分离，前台
                                                 基于Vue全家桶开发，前台商城演示地址：<a href="" target="_blank">点我查看</a><br><br>
                                                 后台几乎完成所有功能开发，你所看到的几乎皆为真实后台数据，为避免数据遭恶意修改，测试体验账号只具备查看权限。
                                                 后台主要使用技术有Dubbo/SSM/Elasticsearch/Redis/MySQL/ActiveMQ/Shiro/Zookeeper等<br><br>
-                                                Github后台源码：<a href="https://github.com/OliangchenO/MyMall" target="_blank">
-                                                    <img src="https://img.shields.io/github/stars/OliangchenO/MyMall.svg?style=social&label=Stars">
-                                                    <img src="https://img.shields.io/github/forks/OliangchenO/MyMall.svg?style=social&label=Fork"></a>
+                                                Github后台源码：<a href="https://github.com/OliangchenO/UMall" target="_blank">
+                                                    <img src="https://img.shields.io/github/stars/OliangchenO/UMall.svg?style=social&label=Stars">
+                                                    <img src="https://img.shields.io/github/forks/OliangchenO/UMall.svg?style=social&label=Fork"></a>
                                             <br>
                                                 Fork或下载前请动动手指Star一下~<br><br>
                                             </p>
@@ -221,8 +221,8 @@
                                 <div class="tab-pane " id="recent">
                                     <div style="text-align: center">你捐赠不起！！！</div>
                                     <div style="text-align: center">
-                                        <img width="230px" height="230px" src="icon/alipay.png">
-                                        <img width="230px" height="230px" src="icon/wechat.png">
+                                        <img width="230px" height="230px" src="icon/alipay1.png">
+                                        <img width="230px" height="230px" src="icon/wechat1.png">
                                     </div>
                                 </div>
                             </div>
@@ -385,7 +385,7 @@
                     <section class="panel">
                         <div class="panel-body">
                             <div class="text-center mbot30">
-                                <h3 class="timeline-title">MyMall更新日志</h3>
+                                <h3 class="timeline-title">UMall更新日志</h3>
                                 <p class="t-info">This is a project timeline</p>
                             </div>
 
@@ -411,7 +411,7 @@
                                                 <span class="timeline-icon green"></span>
                                                 <span class="timeline-date">17:00 pm</span>
                                                 <h1 class="green">22 Oct | Sunday</h1>
-                                                <p><a href="http://blog.OliangchenO.cn" target="_blank">OliangchenO</a> 完成目前所有功能开发 <span><a href="https://github.com/OliangchenO/MyMall" class="green" target="_blank">v1.0发布</a></span></p>
+                                                <p><a href="http://blog.OliangchenO.cn" target="_blank">OliangchenO</a> 完成目前所有功能开发 <span><a href="https://github.com/OliangchenO/UMall" class="green" target="_blank">v1.0发布</a></span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -424,7 +424,7 @@
                                                 <span class="timeline-icon blue"></span>
                                                 <span class="timeline-date">11:35 pm</span>
                                                 <h1 class="blue">13 Oct | Friday</h1>
-                                                <p><a href="http://blog.OliangchenO.cn" target="_blank">OliangchenO</a> 完成后端接口改造二次开发 <span><a class="blue" href="https://github.com/OliangchenO/MyMall-front" target="_blank">MyMall-Front</a></span></p>
+                                                <p><a href="http://blog.OliangchenO.cn" target="_blank">OliangchenO</a> 完成后端接口改造二次开发 <span><a class="blue" href="https://github.com/OliangchenO/UMall-front" target="_blank">UMall-Front</a></span></p>
                                                 <div class="album">
                                                     <a href="#">
                                                         <img alt="" width="48px" height="32px" src="http://oweupqzdv.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170915134720.png">
@@ -460,7 +460,7 @@
                                                 </p>
                                                 <div class="notification">
                                                     <i class=" icon-exclamation-sign"></i> 启动了前台项目
-                                                    <a href="https://github.com/OliangchenO/MyMall-front" target="_blank">MyMall-Front</a>
+                                                    <a href="https://github.com/OliangchenO/UMall-front" target="_blank">UMall-Front</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -475,7 +475,7 @@
                                                 <span class="timeline-date">09:00 pm</span>
                                                 <h1 class="light-green">28 July | Friday</h1>
                                                 <p><a href="http://blog.OliangchenO.cn" target="_blank">OliangchenO</a> 启动了
-                                                    <span><a href="https://github.com/OliangchenO/MyMall" target="_blank" class="light-green">MyMall</a></span>
+                                                    <span><a href="https://github.com/OliangchenO/UMall" target="_blank" class="light-green">UMall</a></span>
                                                     项目，并完成第一次提交</p>
                                             </div>
                                         </div>

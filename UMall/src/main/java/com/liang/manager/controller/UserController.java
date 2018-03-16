@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * @author Exrickx
+ * @author Liang
  */
 @RestController
 @Api(description= "管理员管理")
