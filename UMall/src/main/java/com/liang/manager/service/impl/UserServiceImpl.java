@@ -2,7 +2,7 @@ package com.liang.manager.service.impl;
 
 import com.liang.common.exception.UMallException;
 import com.liang.common.pojo.DataTablesResult;
-import com.liang.manager.dao.*;
+import com.liang.manager.mapper.*;
 import com.liang.manager.dto.RoleDto;
 import com.liang.manager.pojo.*;
 import com.liang.manager.service.UserService;

@@ -1,9 +1,10 @@
 package com.liang.manager.pojo;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class TbThanks {
+public class TbThanks implements Serializable {
     private Integer id;
 
     private String nickName;
@@ -14,7 +15,17 @@ public class TbThanks {
 
     private String info;
 
+    private String time;
+
     private Date date;
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
 
     public Integer getId() {
         return id;

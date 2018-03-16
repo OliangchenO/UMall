@@ -3,7 +3,7 @@ package com.liang.common.pojo;
 import java.io.Serializable;
 
 /**
- * Created by Exrick on 2017/8/2.
+ * Created by Liang on 2017/8/2.
  */
 public class ZTreeNode implements Serializable {
 

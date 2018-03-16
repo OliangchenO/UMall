@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.liang.manager.dao.TbItemMapper">
+<mapper namespace="com.liang.manager.mapper.TbItemMapper">
   <resultMap id="BaseResultMap" type="com.liang.manager.pojo.TbItem">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
@@ -90,7 +90,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from tb_item
     where id = #{id,jdbcType=BIGINT}
@@ -106,14 +106,14 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.liang.manager.pojo.TbItem">
-    insert into tb_item (id, title, sell_point, 
-      price, num, limit_num, 
-      image, cid, status, 
-      created, updated)
-    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{sellPoint,jdbcType=VARCHAR}, 
-      #{price,jdbcType=BIGINT}, #{num,jdbcType=INTEGER}, #{limitNum,jdbcType=INTEGER}, 
-      #{image,jdbcType=VARCHAR}, #{cid,jdbcType=BIGINT}, #{status,jdbcType=TINYINT}, 
-      #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP})
+    insert into tb_item (id, title, sell_point,
+    price, num, limit_num,
+    image, cid, status,
+    created, updated)
+    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{sellPoint,jdbcType=VARCHAR},
+    #{price,jdbcType=BIGINT}, #{num,jdbcType=INTEGER}, #{limitNum,jdbcType=INTEGER},
+    #{image,jdbcType=VARCHAR}, #{cid,jdbcType=BIGINT}, #{status,jdbcType=TINYINT},
+    #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.liang.manager.pojo.TbItem">
     insert into tb_item
@@ -238,16 +238,16 @@
   <update id="updateByExample" parameterType="map">
     update tb_item
     set id = #{record.id,jdbcType=BIGINT},
-      title = #{record.title,jdbcType=VARCHAR},
-      sell_point = #{record.sellPoint,jdbcType=VARCHAR},
-      price = #{record.price,jdbcType=BIGINT},
-      num = #{record.num,jdbcType=INTEGER},
-      limit_num = #{record.limitNum,jdbcType=INTEGER},
-      image = #{record.image,jdbcType=VARCHAR},
-      cid = #{record.cid,jdbcType=BIGINT},
-      status = #{record.status,jdbcType=TINYINT},
-      created = #{record.created,jdbcType=TIMESTAMP},
-      updated = #{record.updated,jdbcType=TIMESTAMP}
+    title = #{record.title,jdbcType=VARCHAR},
+    sell_point = #{record.sellPoint,jdbcType=VARCHAR},
+    price = #{record.price,jdbcType=BIGINT},
+    num = #{record.num,jdbcType=INTEGER},
+    limit_num = #{record.limitNum,jdbcType=INTEGER},
+    image = #{record.image,jdbcType=VARCHAR},
+    cid = #{record.cid,jdbcType=BIGINT},
+    status = #{record.status,jdbcType=TINYINT},
+    created = #{record.created,jdbcType=TIMESTAMP},
+    updated = #{record.updated,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -291,15 +291,58 @@
   <update id="updateByPrimaryKey" parameterType="com.liang.manager.pojo.TbItem">
     update tb_item
     set title = #{title,jdbcType=VARCHAR},
-      sell_point = #{sellPoint,jdbcType=VARCHAR},
-      price = #{price,jdbcType=BIGINT},
-      num = #{num,jdbcType=INTEGER},
-      limit_num = #{limitNum,jdbcType=INTEGER},
-      image = #{image,jdbcType=VARCHAR},
-      cid = #{cid,jdbcType=BIGINT},
-      status = #{status,jdbcType=TINYINT},
-      created = #{created,jdbcType=TIMESTAMP},
-      updated = #{updated,jdbcType=TIMESTAMP}
+    sell_point = #{sellPoint,jdbcType=VARCHAR},
+    price = #{price,jdbcType=BIGINT},
+    num = #{num,jdbcType=INTEGER},
+    limit_num = #{limitNum,jdbcType=INTEGER},
+    image = #{image,jdbcType=VARCHAR},
+    cid = #{cid,jdbcType=BIGINT},
+    status = #{status,jdbcType=TINYINT},
+    created = #{created,jdbcType=TIMESTAMP},
+    updated = #{updated,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <select id="selectItemByCondition" resultMap="BaseResultMap">
+    SELECT * FROM tb_item
+    WHERE (title LIKE #{search}
+    OR
+    sell_point LIKE #{search}
+    OR
+    price LIKE #{search}
+    OR
+    id LIKE #{search})
+    <if test="cid != -1">
+      AND cid = #{cid}
+    </if>
+    ORDER BY
+    ${orderCol}
+    ${orderDir}
+  </select>
+  <select id="selectItemByMultiCondition" resultMap="BaseResultMap">
+    SELECT * FROM tb_item
+    WHERE (title LIKE #{search}
+    OR
+    sell_point LIKE #{search}
+    OR
+    price LIKE #{search})
+    <if test="cid != -1">
+      AND cid = #{cid}
+    </if>
+    <if test="minDate != null and minDate != '' and maxDate != null and maxDate != ''">
+      AND created BETWEEN #{minDate} AND #{maxDate}
+    </if>
+    ORDER BY
+    ${orderCol}
+    ${orderDir}
+  </select>
+  <select id="selectItemFront" resultMap="BaseResultMap">
+    SELECT * FROM tb_item
+    WHERE status = 1
+    <if test="priceGt != null and priceGt >= 0 and priceLte != null and priceLte >= 0">
+      AND price BETWEEN #{priceGt} AND #{priceLte}
+    </if>
+    ORDER BY
+    ${orderCol}
+    ${orderDir}
+  </select>
 </mapper>

@@ -3,7 +3,7 @@ package com.liang.manager.dto;
 import java.io.Serializable;
 
 /**
- * Created by Exrick on 2017/8/25.
+ * Created by Liang on 2017/8/25.
  */
 public class MemberDto implements Serializable{
 

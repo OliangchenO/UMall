@@ -3,7 +3,7 @@ package com.liang.manager.dto.front;
 import java.io.Serializable;
 
 /**
- * @author Exrickx
+ * @author Liang
  */
 public class MemberLoginRegist implements Serializable {
 
