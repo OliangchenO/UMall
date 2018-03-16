@@ -27,7 +27,7 @@
         <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" />
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.liang.manager.mapper" />
+        <property name="basePackage" value="com.liang.manager.mapper,com.liang.search.mapper" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 </beans>
